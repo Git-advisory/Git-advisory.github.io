@@ -84,11 +84,39 @@ footer a:hover {
     text-decoration: none;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 767px) {
-    .navbar-nav {
-       
+.header-title{
+    color: #CEE2F3;
+    font-size: 42px;
+    text-decoration: none 
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+    .header-title{
+        color: #CEE2F3;
+        font-size: 18px;
+        text-decoration: none 
     }
+    .hide-on-sm {
+        display: none;
+    }
+     
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .card-img-top {
+        height: 100px;
+    }
+    .header-title{
+        color: #CEE2F3;
+        font-size: 32px;
+        text-decoration: none 
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {    
     
     .navbar-nav .nav-link {
         padding: 10px 15px;
@@ -103,28 +131,45 @@ footer a:hover {
     }
     .header-title{
         color: #CEE2F3;
-        font-size: 42px;
-        text-decoration: none 
-    }
-}
-
-@media (max-width: 576px) {
-    .card-img-top {
-        height: 100px;
-    }
-    .header-title{
-        color: #CEE2F3;
         font-size: 32px;
         text-decoration: none 
     }
 }
 
-/* Custom */
-.header-title{
-    color: #CEE2F3;
-    font-size: 62px;
-    text-decoration: none 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .header-title{
+        color: #CEE2F3;
+        font-size: 52px;
+        text-decoration: none 
+    }
 }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .header-title{
+        color: #CEE2F3;
+        font-size: 52px;
+        text-decoration: none 
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .header-title{
+        color: #CEE2F3;
+        font-size: 62px;
+        text-decoration: none 
+    }
+}
+
+
+
+
+
+
+/* Custom */
+
 
 .business{
     font-family: rubik-medium, sans-serif;
@@ -146,6 +191,10 @@ footer a:hover {
 }
 
 #carouselExampleIndicators{
-    width: 600px;
-    height: 400px;
+    width: 60vh;
+    height: 40vh;
+}
+
+.navbar-toggler{
+    background-color: white;
 }
