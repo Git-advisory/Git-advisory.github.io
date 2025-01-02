@@ -1,0 +1,151 @@
+/* General Styling */
+body {
+    font-family: georgia,palatino,book antiqua,palatino linotype,serif;
+    color: #FFFF;
+    background-color: rgb(0, 0, 50);
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styling */
+header {    
+    color: white;
+    padding: 20px 0;
+    grid-row: 1;
+}
+
+header .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-family: montserrat, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFD300 !important; /* Highlight color from the site */    
+}
+
+/* Main Content */
+main {
+
+    grid-row: 2;
+    padding: 20px 0;
+}
+
+/* Sections */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-content {
+    padding: 0 15px;
+}
+
+/* Cards for Services or About */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Bootstrap Dark Color */
+    color: white;
+    padding: 30px 0;
+    grid-row: 3;
+}
+
+footer a {
+    color: #FFD300; /* Highlight color */
+}
+
+footer a:hover {
+    color: #007BFF; /* Bootstrap Primary Color */
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .navbar-nav {
+       
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+    .header-title{
+        color: #CEE2F3;
+        font-size: 42px;
+        text-decoration: none 
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 100px;
+    }
+    .header-title{
+        color: #CEE2F3;
+        font-size: 32px;
+        text-decoration: none 
+    }
+}
+
+/* Custom */
+.header-title{
+    color: #CEE2F3;
+    font-size: 62px;
+    text-decoration: none 
+}
+
+.business{
+    font-family: rubik-medium, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.social-icons a {
+    color: #333; /* Default color */
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #FFD300  /* Change color on hover, for example */
+}
+.about_content{
+    font-weight: bold;
+}
+
+#carouselExampleIndicators{
+    width: 600px;
+    height: 400px;
+}
