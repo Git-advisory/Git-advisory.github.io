@@ -6,7 +6,7 @@ body {
     line-height: 1.6;
     display: grid;
     grid-template-rows: 1fr auto;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0;
 }
 
@@ -197,4 +197,26 @@ footer a:hover {
 
 .navbar-toggler{
     background-color: white;
+}
+
+.service_icon{
+    width: 54px;
+    height: 61px;
+}
+
+.research_links{
+    text-align: left;
+    list-style-type: none;
+}
+.research_link {
+    cursor: pointer;
+    color: #FFFF;   
+    text-decoration: none; 
+}
+.research_link a:hover {
+    color: #FFD300  /* Change color on hover, for example */
+}
+.ul{
+    display: inline-block;
+     text-align: left;
 }
