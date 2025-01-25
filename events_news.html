@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
 </head>
 <body>
 
@@ -37,12 +38,13 @@
 
 <!-- Main Content -->
 <main class="container text-center text-white">
-     <div class="row">
-        <a href="index.html" target="_blank" rel="noopener noreferrer" aria-label="X">
-            <i class="fa fa-home"></i>
-        </a>
-     </div>
-    
+    <ul id="blog-list">
+        <li><a href="#" onclick="loadMarkdown('posts/my-first-post.md')">My First Post</a></li>
+        <li><a href="#" onclick="loadMarkdown('posts/my-second-post.md')">My Second Post</a></li>
+    </ul>
+    <div id="blog-content">
+        <!-- Markdown content will be rendered here -->
+    </div>
 </main>
 
 <!-- Footer -->
@@ -54,5 +56,27 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+    // Function to fetch and render Markdown
+    async function loadMarkdown(filePath) {
+        try {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+                throw new Error('Markdown file not found!');
+            }
+            const markdown = await response.text();
+            // Parse Markdown into HTML using Marked.js
+            const htmlContent = marked.parse(markdown);
+            // Insert the HTML into the page
+            document.getElementById('blog-content').innerHTML = htmlContent;
+        } catch (error) {
+            console.error(error);
+            document.getElementById('blog-content').innerHTML = '<p>Error loading the blog post.</p>';
+        }
+    }
+
+    // Load a specific Markdown file
+    loadMarkdown('resources/posts/2025-01-13-my-first-post.md');
+</script>
 </body>
 </html>
