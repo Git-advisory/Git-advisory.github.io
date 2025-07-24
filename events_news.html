@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Indian Trade Advisory (GITA Services)</title>
+    <title>German Indian Trade Advisory (GITA Services) - Events & News</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +15,7 @@
 <!-- Header with navigation -->
 <header class="header-bg py-3">
     <div class="container">
-        <img src="images/logo.avif">
+        <img src="images/logo.avif" alt="GITA Logo">
         <a class="header-title" href="#">German Indian Trade Advisory (GITA)</a>
     </div>
     <nav class="navbar navbar-expand-lg container">        
@@ -28,55 +28,43 @@
                 <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="research_insights.html">Research Insights</a></li>
-                <li class="nav-item"><a class="nav-link" href="under_development.html">Events & News</a></li>
+                <li class="nav-item"><a class="nav-link" href="interviews.html">Interviews</a></li>
+                <li class="nav-item"><a class="nav-link active" href="events_news.html">Events & News</a></li>
                 <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-
 <!-- Main Content -->
-<main class="container text-center text-white">
+<main class="container text-white">
+    <h2 class="my-4">Events & News</h2>
     <ul id="blog-list">
-        <li><a href="#" onclick="loadMarkdown('posts/my-first-post.md')">My First Post</a></li>
-        <li><a href="#" onclick="loadMarkdown('posts/my-second-post.md')">My Second Post</a></li>
+        <li>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Indo_German_Technology_trade_opportunities.jpeg" alt="Trade Event" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Indo German Technology trade opportunities</h3>
+                    <!-- <p>Indo German Technology trade opportunities</p> -->
+                    <a href="https://www.wtca.org/news/indo-german-technology-trade-opportunities" target="_blank" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <hr/>
+        </li>        
     </ul>
-    <div id="blog-content">
-        <!-- Markdown content will be rendered here -->
-    </div>
 </main>
 
 <!-- Footer -->
-<!-- <footer class="footer-bg py-3">
+<footer class="footer-bg py-3">
     <div class="container text-center text-white">
-        <p>&copy; 2025 German Indian Trade. All rights reserved.</p>
+        <p>© 2025 German Indian Trade. All rights reserved.</p>
     </div>
-</footer> -->
+</footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script>
-    // Function to fetch and render Markdown
-    async function loadMarkdown(filePath) {
-        try {
-            const response = await fetch(filePath);
-            if (!response.ok) {
-                throw new Error('Markdown file not found!');
-            }
-            const markdown = await response.text();
-            // Parse Markdown into HTML using Marked.js
-            const htmlContent = marked.parse(markdown);
-            // Insert the HTML into the page
-            document.getElementById('blog-content').innerHTML = htmlContent;
-        } catch (error) {
-            console.error(error);
-            document.getElementById('blog-content').innerHTML = '<p>Error loading the blog post.</p>';
-        }
-    }
 
-    // Load a specific Markdown file
-    loadMarkdown('resources/posts/2025-01-13-my-first-post.md');
-</script>
 </body>
 </html>
